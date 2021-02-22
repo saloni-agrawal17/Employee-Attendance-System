@@ -1,0 +1,9 @@
+*.pyc
+*~
+/.vscode
+__pycache__
+env
+db.sqlite3
+mysite/static/
+.DS_Store
+media/

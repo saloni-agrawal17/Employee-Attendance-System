@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% block content %}
+<div id="container" data-url="{% url 'attendance' %}"></div>
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $.ajax({
+        url: $("#container").attr("data-url"),
+        dataType: 'json',
+        success: function (data) {
+            Highcharts.chart("container", data);
+        }
+    });
+</script>
+{% endblock %}

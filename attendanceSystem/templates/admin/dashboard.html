@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <a href="{% url 'list_of_employees'%}">See list of present/absent employees</a><br>
+    <a href="{% url 'employee_monthly_report'%}">See monthly report</a><br>
+    <a href="{% url 'employee_attendance'%}">See monthly attendance</a><br>
+    <a href="{% url 'logout' employee=user.pk%}">
+        <button type="submit">
+            Logout
+        </button>
+        {%else%}
+    <h1>Log in first</h1>
+    {% endif %}
+    </a>
+
+</body>
+</html>

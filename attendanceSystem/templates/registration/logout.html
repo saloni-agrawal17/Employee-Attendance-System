@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <h1>Hi {{username}}</h1><br>
+        <h2>You have worked {{minutes}} minutes in total.</h2><br>
+        <h2>Your total working days in this month are {{working_days}} and absent days are {{absent_days}} </h2>
+        <a href="{% url 'logout' employee=user.pk%}">
+            <button type="submit">
+                Logout
+            </button>
+        </a>
+    {%else%}
+    <h1>Log in first</h1>
+    {% endif %}
+
+</body>
+</html>
