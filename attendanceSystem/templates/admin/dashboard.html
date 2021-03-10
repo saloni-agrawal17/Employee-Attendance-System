@@ -1,22 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    {% if user.is_authenticated %}
-    <a href="{% url 'list_of_employees'%}">See list of present/absent employees</a><br>
-    <a href="{% url 'employee_monthly_report'%}">See monthly report</a><br>
-    <a href="{% url 'employee_attendance'%}">See monthly attendance</a><br>
-    <a href="{% url 'logout' employee=user.pk%}">
-        <button type="submit">
-            Logout
-        </button>
-        {%else%}
-    <h1>Log in first</h1>
-    {% endif %}
-    </a>
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Employee Reporting System</title>
+</head>
+
+<body>
+    <br><br>
+    <h1>
+        <p class="text-center">Employee Reporting System</p>
+    </h1>
+
+    {% if user.is_authenticated %}
+
+    <div class="alert alert-primary mx-auto" style="width: 500px;" role="alert">
+        <a href="{% url 'list_of_employees'%}" class="alert-link">See List of Present/Absent Employees !</a>
+    </div>
+
+    <div class="alert alert-danger mx-auto" style="width: 500px;" role="alert">
+        <a href="{% url 'employee_monthly_report'%}" class="alert-link">See Monthly Report</a>
+    </div>
+
+    <div class="alert alert-success mx-auto" style="width: 500px;" role="alert">
+        <a href="{% url 'employee_attendance'%}" class="alert-link">See Monthly Attendance</a>
+    </div>
+
+    <div class="mx-auto" style="width: 100px;">
+        <a href="{% url 'logout' employee=user.pk%}">
+            <button type="submit" class="btn btn-outline-primary">Logout</button>
+            {%else%}
+            <h1>Log in first</h1>
+            {% endif %}
+        </a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
