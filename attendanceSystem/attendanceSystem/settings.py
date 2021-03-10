@@ -81,11 +81,11 @@ WSGI_APPLICATION = 'attendanceSystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'attendancesystem',
-        'USER': 'root',
-        'PASSWORD': '',
+        'NAME': 'agrawalsaloni17$attendancesystem',
+        'USER': 'agrawalsaloni17',
+        'PASSWORD': 'salu#19398',
         'HOST': 'agrawalsaloni17.mysql.pythonanywhere-services.com',
-        'PORT': '3306',
+        'PORT': '',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
