@@ -1,5 +1,4 @@
 from django.http import HttpRequest
-from  django.contrib.gis.geoip2 import GeoIP2
 from django.shortcuts import render, redirect
 from .models import AttendanceTracker
 from datetime import datetime, date, timedelta
