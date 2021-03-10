@@ -40,8 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'attendancetracker',
     'crispy_forms',
+    'geoip2',
 
 ]
+
+GEOIP_PATH =os.path.join(BASE_DIR, 'geoip')
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
