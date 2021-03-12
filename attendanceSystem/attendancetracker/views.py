@@ -28,13 +28,14 @@ def home(request):
             minute = 0
             sec = 0
             for i in query_res:
-                working_hours = i.working_hours_per_day
-                h = working_hours.strftime("%H")
-                m = working_hours.strftime("%M")
-                s = working_hours.strftime("%S")
-                hrs = hrs + int(h)
-                minute = minute + int(m)
-                sec = sec + int(s)
+                if i.working_hours_per_day:
+                    working_hours = i.working_hours_per_day
+                    h = working_hours.strftime("%H")
+                    m = working_hours.strftime("%M")
+                    s = working_hours.strftime("%S")
+                    hrs = hrs + int(h)
+                    minute = minute + int(m)
+                    sec = sec + int(s)
 
             minutes = (hrs * 60) + (sec % 60) + minute
 
