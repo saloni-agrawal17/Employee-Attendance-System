@@ -83,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'agrawalsaloni17$attendancesystem',
         'USER': 'agrawalsaloni17',
-        'PASSWORD': 'salu#19398',
+        'PASSWORD': '#',
         'HOST': 'agrawalsaloni17.mysql.pythonanywhere-services.com',
         'PORT': '',
         'OPTIONS': {
